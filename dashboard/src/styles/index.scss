@@ -1,0 +1,10 @@
+@use "./variables.scss" as v;
+@use "./reset.scss";
+
+div {
+  font-family: v.$Vintage;
+  font-size: 10vw;
+}
+body {
+  background-color: v.$bgC;
+}
