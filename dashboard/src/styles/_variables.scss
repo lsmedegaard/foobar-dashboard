@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Vintage;
+  src: url("../assets/VINTAGE\ COLLEGE\ DEPT_worn.otf") format("truetype");
+}
+
+@font-face {
+  font-family: LemonMilk;
+  src: url("../assets/LemonMilk.otf") format("truetype");
+}
+
+@font-face {
+  font-family: Smythe;
+  src: url("../assets/Smythe-Regular.ttf") format("truetype");
+}
+
+$lemonMilk: "font-family", LemonMilk;
+$vintage: "font-family", Vintage;
+$smythe: "font-family", Smythe;
+
+$bgC: #1a2129;
