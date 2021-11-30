@@ -2,13 +2,10 @@
 @use "./reset.scss";
 
 div {
-  font-family: v.$Vintage;
-  font-size: 10vw;
-}
-body {
-  background-color: v.$bgC;
+  font-family: v.$vintage;
+  font-size: 2vw;
 }
 
-.app {
-  background-color: hotpink;
+body {
+  background-color: v.$bgC;
 }

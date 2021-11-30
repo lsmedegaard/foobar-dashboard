@@ -5,20 +5,22 @@ import Storage from "./components/storage";
 import Taps from "./components/taps";
 import Queue from "./components/queue";
 import Tables from "./components/tables";
-import Serving from "./components/serving";
-import "./styles/app.css";
+import FetchJSON from "./components/fetchJSON";
+import "./styles/dashboard.scss";
 
 function App() {
   return (
-  <div className="app">
+  <>
   <Header />
-  <Bartenders />
-  <Storage />
-  <Taps />
+  <div className="dashboard">
   <Queue />
+  <Bartenders />
+  <Taps />
+  <Storage />
   <Tables />
-  <Serving />
   </div>
+   {/* <FetchJSON/> */}
+  </>
   )
 }
 
