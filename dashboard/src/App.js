@@ -6,18 +6,24 @@ import Taps from "./components/taps";
 import Queue from "./components/queue";
 import Tables from "./components/tables";
 import FetchJSON from "./components/fetchJSON";
-import "./styles/dashboard.scss";
+import "./styles/index.scss";
 
 function App() {
+	
+  let somedata;
+  fetch('https://coding-mokeys-foobar.herokuapp.com/')
+  .then(response => response.json())
+  .then(data => somedata = data);
+  
   return (
   <>
-  <Header />
+  <Header time={somedata.timestamp}/>
   <div className="dashboard">
   <Queue />
   <Bartenders />
   <Taps />
-  <Storage />
   <Tables />
+  <Storage />
   </div>
    {/* <FetchJSON/> */}
   </>

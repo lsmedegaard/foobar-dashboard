@@ -1,0 +1,32 @@
+@use "./variables.scss" as v;
+
+header {
+  display: flex;
+  color: v.$lysC;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  #logo {
+    @mixin displayLogo {
+      font-size: 1.5em;
+      color: color(red_header);
+      font-family: v.$vintage;
+    }
+
+    .logo {
+      @include displayLogo();
+      .firstfade {
+        opacity: 20%;
+        margin-top: -65px;
+      }
+      .lastfade {
+        opacity: 5%;
+        margin-top: -65px;
+      }
+    }
+  }
+  button {
+    width: 100px;
+    height: 30px;
+  }
+}

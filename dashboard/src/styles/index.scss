@@ -1,5 +1,11 @@
 @use "./variables.scss" as v;
 @use "./reset.scss";
+@use "./header";
+@use "./queue";
+@use "./bartender";
+@use "./storage";
+@use "./tables";
+@use "./taps";
 
 div {
   font-family: v.$vintage;
@@ -8,4 +14,17 @@ div {
 
 body {
   background-color: v.$bgC;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* text-align: center; */
+}
+
+.dashboard {
+  padding: 50px;
+  gap: 30px;
+  background-color: #1a2129;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
