@@ -10,14 +10,14 @@ import "./styles/index.scss";
 
 function App() {
 	
-  let somedata;
+  
   fetch('https://coding-mokeys-foobar.herokuapp.com/')
   .then(response => response.json())
-  .then(data => somedata = data);
+  .then(data => console.log(data));
   
   return (
   <>
-  <Header time={somedata.timestamp}/>
+  <Header/>
   <div className="dashboard">
   <Queue />
   <Bartenders />
