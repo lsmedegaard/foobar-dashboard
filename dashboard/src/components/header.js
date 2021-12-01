@@ -6,11 +6,11 @@ function Header(props) {
   return (
   <header>
       <div id="logo">
-      <div class="logo">
-      <h1 class="title">
+      <div className="logo">
+      <h1 className="title">
       FOO BAR
-      <div class="firstfade">FOO BAR</div>
-      <div class="lastfade">FOO BAR</div>
+      <div className="firstfade">FOO BAR</div>
+      <div className="lastfade">FOO BAR</div>
       </h1>
 </div>
       </div>
