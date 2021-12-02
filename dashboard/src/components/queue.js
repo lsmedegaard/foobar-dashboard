@@ -1,6 +1,7 @@
 import React from "react";
 
 function Queue(){
+ 
     return (
         <section id="queue">
             <h1>Queue</h1>

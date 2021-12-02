@@ -7,46 +7,51 @@ import Queue from "./components/queue";
 import Tables from "./components/tables";
 /* import FetchJSON from "./components/fetchJSON"; */
 import "./styles/index.scss";
+import { useState, useEffect } from "react";
 
 function App() {
 
-/*   let json;
-  fetch('https://coding-mokeys-foobar.herokuapp.com/')
-  .then(response => response.json())
-  .then(data =>  console.log(data)) */
+  const [fulldata, setData] = useState([]);
 
- 
- const fetchJSON = async () => {
-  const res = await fetch("https://coding-mokeys-foobar.herokuapp.com/",{
-    method: "get",
-    headers: {
-      "Content-Type": 
-      "application/json; charset=utf-8",
-    },
-  });
-  const jsonData = await res.json();
-  console.log(jsonData)
+ /*  useEffect(()=>{
+      fetch('https://coding-mokeys-foobar.herokuapp.com/')
+      .then(response => response.json())
+      .then(data => setData(data)) 
+    },[])  */
 
+
+//useEffect every 60 secs
+// THIS ONE WORRKS DOOO NOT DELETE!!!!!!!!!!!!!!!!!!!!!////////////////
+       useEffect(() => {
+        const interval = setInterval(() => {
+          console.log('This will run every second!');
+          
+            fetch('https://coding-mokeys-foobar.herokuapp.com/')
+            .then(response => response.json())
+            .then(data =>  setData(data))
+        }, 6000);
+        return () => clearInterval(interval);
+      }, []);
   
-  return jsonData;
- }
-
  
 
+ console.log(fulldata)
+
+ 
   
   return (
   <>
-  <Header /* time={data.timestamp} */ />
+  <Header  time={fulldata.timestamp} /* revenue={fulldata.revenue} */ />
   <div className="dashboard">
-  <Queue />
-  <Bartenders />
-  <Taps />
-  <Tables />
-  <Storage />
+  <Queue queue={fulldata.queue} />
+  <Bartenders  bartenders={fulldata.bartenders}  />
+  <Taps taps={fulldata.taps}/>
+  <Tables tables={fulldata.tables} />
+  <Storage storage={fulldata.storage}/>
   </div>
   </>
   )
-}
+  }
 
 
 

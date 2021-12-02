@@ -8,22 +8,22 @@ header {
   padding: 20px 5%;
   #logo {
     @mixin displayLogo {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: color(red_header);
       font-family: v.$vintage;
     }
 
-    .logo {
+    /*     .logo {
       @include displayLogo();
       .firstfade {
         opacity: 20%;
         margin-top: -65px;
-      }
-      .lastfade {
+      } */
+    /*       .lastfade {
         opacity: 5%;
         margin-top: -65px;
       }
-    }
+    } */
   }
   button {
     width: 100px;

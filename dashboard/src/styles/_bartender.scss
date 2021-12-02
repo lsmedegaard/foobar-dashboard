@@ -8,4 +8,23 @@
     margin-left: 10px;
     font-size: 2rem;
   }
+  h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  p {
+    font-family: system ui;
+    color: white;
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+
+#data-bartenders {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 120px;
+  gap: 60px;
 }
