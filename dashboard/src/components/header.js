@@ -14,7 +14,7 @@ function Header(props) {
       </h1>
 </div>
       </div>
-      <div id="slogan">Everybody is kung foo drinking</div>
+      <div id="slogan">Everybody was kung foo drinking</div>
       <div id="data-time"><p>TIME:{props.time}</p></div>
       <div id="data-current-revenue">REVENUE:{props.revenue} </div>
       <button id="report">REPORT</button>

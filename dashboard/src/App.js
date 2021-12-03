@@ -45,7 +45,7 @@ function App() {
   <div className="dashboard">
   <Queue queue={fulldata.queue} />
   <Bartenders  bartenders={fulldata.bartenders}  />
-  <Taps taps={fulldata.taps}/>
+  <Taps taps={fulldata.taps} />
   <Tables tables={fulldata.tables} />
   <Storage storage={fulldata.storage}/>
   </div>

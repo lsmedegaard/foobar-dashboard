@@ -7,6 +7,10 @@
 @use "./tables";
 @use "./taps";
 
+* {
+  box-sizing: border-box;
+}
+
 div {
   font-family: v.$vintage;
   font-size: 2vw;
@@ -25,6 +29,9 @@ body {
   gap: 30px;
   background-color: #1a2129;
   display: grid;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+
+  /*   grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr; */
 }

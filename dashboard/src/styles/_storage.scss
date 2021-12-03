@@ -2,15 +2,11 @@
 
 #storage {
   border: 3px solid v.$redC;
+  height: 100%;
+  width: 100%;
   h1 {
     color: v.$redC;
     margin-left: 10px;
     font-size: 2rem;
   }
 }
-/* 
-#storage_01 {
-  background-image: url(../assets/images/storage_squared_01.svg);
-  height: 50px;
-}
- */

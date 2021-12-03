@@ -7,16 +7,16 @@ if (!props.bartenders) {
 
 const bartenderIcons = [
    {
-    src: "./public/assets/icons/peter_icon.svg",
+    src: "./assets/icons/peter_icon_red.svg",
   },
   {
-    src: "./public/assets/icons/klaus_icon.svg",
+    src: "./assets/icons/klaus_icon_red.svg",
   },
    {
-    src: "./public/assets/icons/jonas_icon.svg",
+    src: "./assets/icons/jonas_icon_red.svg",
   },
    {
-   src: "./public/assets/icons/dannie_icon.svg",
+   src: "./assets/icons/dannie_icon_red.svg",
   },
 ]
 console.log(props)
@@ -27,7 +27,7 @@ console.log(props)
   <div className="data-first-view">
     <div id="data-bartenders">
 
-      {props.bartenders.map((bartender, index)=>
+       {props.bartenders.map((bartender, index)=>
        
        <div id={"bartender_0"+index} className="bartender">
        <img src={bartenderIcons[index].src}/>
@@ -38,7 +38,7 @@ console.log(props)
        <p>Customer:{props.bartenders[index].servingCustomer}</p>
        
        </div>
-       )}
+       )} 
 
        
       
