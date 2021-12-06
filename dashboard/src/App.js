@@ -29,19 +29,19 @@ function App() {
             fetch('https://coding-mokeys-foobar.herokuapp.com/')
             .then(response => response.json())
             .then(data =>  setData(data))
-        }, 6000);
+        }, 1000);
         return () => clearInterval(interval);
       }, []);
   
  
 
- console.log(fulldata)
+//  console.log(fulldata)
 
  
   
   return (
   <>
-  <Header  time={fulldata.timestamp} /* revenue={fulldata.revenue} */ />
+  <Header time={fulldata.timestamp} /* revenue={fulldata.revenue} */ />
   <div className="dashboard">
   <Queue queue={fulldata.queue} />
   <Bartenders  bartenders={fulldata.bartenders}  />

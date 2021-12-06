@@ -21,6 +21,14 @@ const bartenderIcons = [
 ]
 console.log(props)
   
+function usingTap(tap){
+if(tap === null){
+  return <p>none</p>
+}
+return tap
+
+}
+
   return (
 <section id="bartenders">
   <h1>Bartenders</h1>
@@ -30,12 +38,17 @@ console.log(props)
        {props.bartenders.map((bartender, index)=>
        
        <div id={"bartender_0"+index} className="bartender">
-       <img src={bartenderIcons[index].src}/>
-       <h3>Name: {props.bartenders[index].name}</h3>
-       <p>Status:{props.bartenders[index].status}</p>
-       <p>StatusDetail:{props.bartenders[index].statusDetail}</p>
-       <p>Using Tap:{props.bartenders[index].usingTap}</p>
-       <p>Customer:{props.bartenders[index].servingCustomer}</p>
+       <img src={bartenderIcons[index].src} alt="bartenderimage"/>
+       <h3>{props.bartenders[index].name}</h3>
+       <h5>Status: </h5>
+       <p>{props.bartenders[index].status}</p>
+       <h5>Status Detail: </h5>
+       <p>{props.bartenders[index].statusDetail}</p>
+       <h5>Using Tap: </h5>
+       <p>{usingTap(props.bartenders[index].usingTap)}</p>
+       {/* {<p>{props.bartenders[index].usingTap === 'null' ? <p>none</p> : props.bartenders[index].usingTap }</p>} */}
+       <h5>Assisting customer nr: </h5>
+       <p>{props.bartenders[index].servingCustomer}</p>
        
        </div>
        )} 
