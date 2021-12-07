@@ -6,8 +6,10 @@
 @use "./storage";
 @use "./tables";
 @use "./taps";
+@import "./mixins.scss";
 
 * {
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -18,20 +20,27 @@ div {
 
 body {
   background-color: v.$bgC;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .dashboard {
   padding: 50px;
   gap: 30px;
+
   background-color: #1a2129;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  @include for-phone-only {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+  }
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr 1fr 1fr));
+
+  // grid-template-columns: 2fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
 
   /*   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr; */
 }
+
+//media queries
