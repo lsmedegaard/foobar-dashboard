@@ -3,24 +3,10 @@
 
 #storage {
   border: 3px solid v.$redC;
-  height: 100%;
-  width: 100%;
 
-  h1 {
-    color: v.$redC;
-    margin-left: 10px;
-    font-size: 2rem;
-  }
-  h3 {
-    color: white;
-    font-size: 1.5rem;
-    margin-left: 10px;
-  }
-  p {
-    font-family: system ui;
-    color: white;
-    margin-left: 10px;
-    font-size: 1rem;
+  .storageimage {
+    min-width: 100px;
+    max-width: 100px;
   }
 }
 
@@ -35,12 +21,3 @@
     flex-wrap: wrap;
   }
 }
-
-.storageimage {
-  height: 10vh;
-}
-
-/* .storageimage {
-  height: 50%;
-  width: auto;
-} */

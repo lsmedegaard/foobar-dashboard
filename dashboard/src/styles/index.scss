@@ -23,16 +23,20 @@ body {
   text-align: center;
 }
 
+// header {
+//   @include for-phone-only {
+//   }
+// }
+
 .dashboard {
   padding: 50px;
   gap: 30px;
-
   background-color: #1a2129;
   display: grid;
   @include for-phone-only {
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
+    max-width: auto;
   }
   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr 1fr 1fr));
 
@@ -41,6 +45,28 @@ body {
 
   /*   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr; */
+  h1 {
+    font-family: v.$lemonMilk;
+    color: v.$redC;
+  }
+  h2 {
+    color: v.$lysC;
+    font-family: v.$lemonMilk;
+  }
+  h3 {
+    color: v.$redC;
+    font-family: v.$lemonMilk;
+    @include for-phone-only {
+      font-size: 0.5rem;
+    }
+  }
+  p {
+    font-family: v.$smythe;
+    color: white;
+    @include for-phone-only {
+      font-size: 0.5rem;
+    }
+  }
 }
 
 //media queries

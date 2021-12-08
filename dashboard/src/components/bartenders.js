@@ -42,15 +42,15 @@ function Bartenders(props) {
           {props.bartenders.map((bartender, index) => (
             <div id={"bartender_0" + index} className="bartender">
               <img src={bartenderIcons[index].src} alt="bartenderimage" />
-              <h3>{props.bartenders[index].name}</h3>
-              <h5>Status: </h5>
+              <h2>{props.bartenders[index].name}</h2>
+              <h3>Status: </h3>
               <p>{props.bartenders[index].status}</p>
-              <h5>Status Detail: </h5>
+              <h3>Status Detail: </h3>
               <p>{props.bartenders[index].statusDetail}</p>
-              <h5>Using Tap: </h5>
+              <h3>Using Tap: </h3>
               <p>{usingTap(props.bartenders[index].usingTap)}</p>
               {/* {<p>{props.bartenders[index].usingTap === 'null' ? <p>none</p> : props.bartenders[index].usingTap }</p>} */}
-              <h5>Assisting customer nr: </h5>
+              <h3>Assisting customer nr: </h3>
               <p>{servingCustomer(props.bartenders[index].servingCustomer)}</p>
             </div>
           ))}

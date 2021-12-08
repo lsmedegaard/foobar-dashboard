@@ -66,8 +66,8 @@ function Storage(props) {
               {/* {<img className="storageimage" src="./assets/images/storage_images/storage_githop.svg" alt="storageimage" />} */}
               <img className="storageimage" src={arrFive[index].src} alt="No image" />
 
-              <h3>Name: {props.storage[index].name}</h3>
-              <p>Amount:{props.storage[index].amount}</p>
+              <h2>{props.storage[index].name}</h2>
+              <p>Amount: {props.storage[index].amount} kegs</p>
             </div>
           ))}
         </div>

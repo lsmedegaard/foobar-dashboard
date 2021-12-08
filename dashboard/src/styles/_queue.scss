@@ -2,17 +2,6 @@
 
 #queue {
   border: 3px solid v.$redC;
-  h1 {
-    color: v.$redC;
-    margin-left: 10px;
-    font-size: 2rem;
-  }
-  h3 {
-    color: v.$redC;
-  }
-  p {
-    color: v.$lysC;
-  }
   .orderList {
     list-style: none;
     color: white;
@@ -21,4 +10,12 @@
 
 #data-queue-barchart {
   display: flex;
+}
+
+.order {
+  text-align: left;
+}
+
+rect {
+  transition: 2s;
 }

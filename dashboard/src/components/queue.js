@@ -13,14 +13,14 @@ function Queue(props) {
     let calculatedTime = currentTime - startTime;
     let date = new Date(calculatedTime);
     let minutes = "0" + date.getMinutes();
-    let seconds = "0" + date.getSeconds();
-    let formattedMinutes = minutes.substr(-2) + ":" + seconds.substr(-2);
-    let formattedSeconds = date.getSeconds();
+    let formattedSeconds = "0" + date.getSeconds();
+    let formattedMinutes = minutes.substr(-2) + ":" + formattedSeconds.substr(-2);
+    let seconds = date.getSeconds();
 
     if (minutes === "0" + 0) {
-      return <p>{formattedSeconds + " seconds ago"}</p>;
+      return <h3>{seconds + " seconds ago"}</h3>;
     } else if (minutes > "0" + 0) {
-      return <p>{formattedMinutes + " minutes ago"}</p>;
+      return <h3>{formattedMinutes + " minutes ago"}</h3>;
     }
   }
 
@@ -84,25 +84,25 @@ function Queue(props) {
       <div className="data-first-view">
         <div id="data-queue-barchart">
           {/*   <div className="chartdiv" id="chartdiv"></div> */}
-          {props.queue.map((queue, index) => (
-            <div id={"order_0" + index} className="order">
-              <h3>{queue.id}</h3>
-              {orderTime(queue.startTime)}
-              <p>
-                {queue.order.map((order, index) => (
-                  <ul className="orderList">
-                    <li>{order}</li>
-                  </ul>
-                ))}
-              </p>
-            </div>
-          ))}
+
           <Barchart queue={props.queue} time={props.time} />
         </div>
       </div>
 
       <div className="data-full-view">
-        <div id="data-queue-fullview"></div>
+        <div id="data-queue-fullview">
+          {props.queue.map((queue, index) => (
+            <div id={"order_0" + index} className="order">
+              <h2>{queue.id}</h2>
+              {orderTime(queue.startTime)}
+              <ul className="orderList">
+                {queue.order.map((order, index) => (
+                  <li>{order}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

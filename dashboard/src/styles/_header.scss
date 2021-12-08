@@ -7,6 +7,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
+  @include for-phone-only {
+    padding: 20px;
+  }
   #logo {
     font-family: v.$vintage;
     // @mixin displayLogo {
@@ -15,29 +18,40 @@ header {
     //   font-family: v.$vintage;
     // }
     h1 {
+      font-size: 3rem;
       @include for-phone-only {
         font-size: 2rem;
         position: absolute;
-        top: 23vw;
+        top: 10vw;
         left: 40vw;
       }
     }
+
+    .firstfade {
+      font-size: 3rem;
+      opacity: 20%;
+      margin-top: -40px;
+      @include for-phone-only {
+        font-size: 2rem;
+        margin-top: 12px;
+      }
+    }
+
+    .lastfade {
+      font-size: 3rem;
+      opacity: 5%;
+      margin-top: -40px;
+      @include for-phone-only {
+        font-size: 2rem;
+        margin-top: 24px;
+      }
+    }
+
     #data-time {
       @include for-phone-only {
         font-size: 2rem;
       }
     }
-    /*     .logo {
-      @include displayLogo();
-      .firstfade {
-        opacity: 20%;
-        margin-top: -65px;
-      } */
-    /*       .lastfade {
-        opacity: 5%;
-        margin-top: -65px;
-      }
-    } */
   }
 
   #slogan {
@@ -48,9 +62,22 @@ header {
   button {
     width: 100px;
     height: 30px;
+    all: unset;
+    border: 1px solid v.$redC;
+    border-radius: 5px;
+    color: v.$redC;
+    font-family: v.$lemonMilk;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
     @include for-phone-only {
       font-size: 0.5rem;
       width: 30px;
+    }
+    &:hover {
+      transform: scale(0.98);
+      background-color: v.$redC;
+      color: v.$bgC;
     }
   }
 }

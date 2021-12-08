@@ -77,7 +77,7 @@ function sortBeers(){
             <div id={"tap_0" + index} className="tap">
               <img className="tapsimage" src={arrFive[index].src} />
 
-              <h3>{props.taps[index].beer}</h3>
+              <h2>{props.taps[index].beer}</h2>
               <p>{percentage(props.taps[index].level, props.taps[index].capacity)}% left</p>
               <p>{inUse(index)}</p>
               {/* {levelArr.push(props.taps[index].level)}

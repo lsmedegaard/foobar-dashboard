@@ -17,11 +17,9 @@ function Header(props) {
     <header>
       <div id="logo">
         <div className="logo">
-          <h1 className="title">
-            FOO BAR
-            {/*       <div className="firstfade">FOO BAR</div>
-      <div className="lastfade">FOO BAR</div> */}
-          </h1>
+          <h1 className="title">FOO BAR</h1>
+          <h1 className="firstfade">FOO BAR</h1>
+          <h1 className="lastfade">FOO BAR</h1>
         </div>
       </div>
       <div id="slogan">- Everybody was kung foo drinking</div>
