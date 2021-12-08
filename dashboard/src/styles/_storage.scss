@@ -1,4 +1,5 @@
 @use "./variables.scss" as v;
+@import "./mixins";
 
 #storage {
   border: 3px solid v.$redC;
@@ -30,6 +31,9 @@
   // flex-wrap: wrap;
   margin-top: 10px;
   gap: 30px;
+  @include for-phone-only {
+    flex-wrap: wrap;
+  }
 }
 
 .storageimage {

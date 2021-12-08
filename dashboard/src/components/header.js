@@ -2,9 +2,9 @@ import React from "react";
 /* import "./styles/header.scss"; */
 
 function Header(props) {
-  if (!props.queue) {
-    return null;
-  }
+  // if (!props.queue) {
+  //   return null;
+  // }
   let timestamp = props.time;
   let date = new Date(timestamp);
   let hours = date.getHours();

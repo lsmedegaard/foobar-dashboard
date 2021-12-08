@@ -7,15 +7,25 @@ function Queue(props) {
   if (!props.queue) {
     return null;
   }
-  /*  let timestamp = props.time;
-  let orderTime = props.queue.startTime;
-  let calculatedTime = timestamp - orderTime;
-  let date = new Date(calculatedTime);
-  let hours = date.getHours();
-  let minutes = "0" + date.getMinutes();
-  let seconds = "0" + date.getSeconds();
-  let formattedTime = hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2);
-  console.log(calculatedTime); */
+
+  function orderTime(startTime) {
+    let currentTime = props.time;
+    let calculatedTime = currentTime - startTime;
+    let date = new Date(calculatedTime);
+    let minutes = "0" + date.getMinutes();
+    let seconds = "0" + date.getSeconds();
+    let formattedTime = minutes.substr(-2) + ":" + seconds.substr(-2);
+    let formattedSeconds = seconds.substr(-2);
+
+    onlySeconds();
+    function onlySeconds() {
+      if (minutes === "0" + 0) {
+        return <p>{formattedSeconds + " seconds ago"}</p>;
+      } else if (minutes > "0" + 0) {
+        return <p>{formattedTime + " minutes ago"}</p>;
+      }
+    }
+  }
 
   /*  console.log(props.queue); */
 
@@ -82,6 +92,7 @@ function Queue(props) {
           {props.queue.map((queue, index) => (
             <div id={"order_0" + index} className="order">
               <h3>{queue.id}</h3>
+              {orderTime(queue.startTime)}
               {/* { <p>Ordered {formattedTime} ago</p> } */}
             </div>
           ))}

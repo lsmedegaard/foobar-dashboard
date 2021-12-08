@@ -41,7 +41,7 @@
     color: v.$lysC;
     font-size: 0.8rem;
     @include for-phone-only {
-      font-size: 0.3rem;
+      font-size: 0.5rem;
     }
     margin-left: 10px;
   }
@@ -53,6 +53,9 @@
   justify-content: center;
   margin-top: 10px;
   gap: 60px;
+  @include for-phone-only {
+    gap: 10px;
+  }
 }
 
 .bartender {
