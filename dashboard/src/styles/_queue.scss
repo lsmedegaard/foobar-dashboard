@@ -2,7 +2,17 @@
 
 #queue {
   border: 3px solid v.$redC;
+  .order {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 7px 0px #13191f;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: #202933;
+  }
   .orderList {
+    display: flex;
     list-style: none;
     color: white;
   }
@@ -12,9 +22,6 @@
   display: flex;
 }
 
-.order {
-  text-align: left;
-}
 
 rect {
   transition: 2s;

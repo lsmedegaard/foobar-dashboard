@@ -94,12 +94,12 @@ function Queue(props) {
           {props.queue.map((queue, index) => (
             <div id={"order_0" + index} className="order">
               <h2>{queue.id}</h2>
-              {orderTime(queue.startTime)}
               <ul className="orderList">
                 {queue.order.map((order, index) => (
-                  <li>{order}</li>
+                  <li>{order} </li>
                 ))}
               </ul>
+              {orderTime(queue.startTime)}
             </div>
           ))}
         </div>
