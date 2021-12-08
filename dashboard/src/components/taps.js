@@ -52,7 +52,7 @@ function sortBeers(){
       return "./assets/images/taps_images/tap_elhefe.svg";
     } else if (beername === "Fairy Tale Ale") {
       return "./assets/images/taps_images/tap_fairytaleale.svg";
-    } else if (beername === "Hollaback") {
+    } else if (beername === "Hollaback Lager") {
       return "./assets/images/taps_images/tap_hollaback.svg";
     } else if (beername === "Hoppily Ever After") {
       return "./assets/images/taps_images/tap_hoppilyeverafter.svg";
@@ -63,7 +63,7 @@ function sortBeers(){
     } else if (beername === "Ruined Childhood") {
       return "./assets/images/taps_images/tap_ruinedchildhood.svg";
     } else if (beername === "Sleighride") {
-      return "./assets/images/taps_images/tap_sleighreid.svg";
+      return "./assets/images/taps_images/tap_sleighride.svg";
     }
     return "NO PICTURE";
   }

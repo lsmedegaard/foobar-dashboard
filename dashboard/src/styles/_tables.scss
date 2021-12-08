@@ -8,14 +8,16 @@
     color: v.$redC;
     margin-left: 10px;
     font-size: 2rem;
+    font-family: v.$vintage;
   }
   h3 {
     color: white;
-    font-size: 3rem;
+    font-size: 1rem;
     text-align: center;
+    font-family: v.$lemonMilk;
   }
   p {
-    font-family: system ui;
+    font-family: v.$lemonMilk;
     color: white;
     font-size: 1.5rem;
     text-align: center;

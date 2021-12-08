@@ -28,7 +28,7 @@ function Storage(props) {
     arrFive.push(props.storage[i]);
   }
 
-  const imgSrc = arrFive.map((storage) => (storage.src = getImgSrc(storage.beer)) /* "./assets/images/taps_images/tap_elhefe.svg" */);
+  const imgSrc = arrFive.map((storage) => (storage.src = getImgSrc(storage.name)) /* "./assets/images/taps_images/tap_elhefe.svg" */);
 
   function getImgSrc(beername) {
     if (beername === "Steampunk") {
@@ -39,7 +39,7 @@ function Storage(props) {
       return "./assets/images/storage_images/storage_elhefe.svg";
     } else if (beername === "Fairy Tale Ale") {
       return "./assets/images/storage_images/storage_fairytaleale.svg";
-    } else if (beername === "Hollaback") {
+    } else if (beername === "Hollaback Lager") {
       return "./assets/images/storage_images/storage_hollaback.svg";
     } else if (beername === "Hoppily Ever After") {
       return "./assets/images/storage_images/storage_hoppilyeverafter.svg";
@@ -50,7 +50,7 @@ function Storage(props) {
     } else if (beername === "Ruined Childhood") {
       return "./assets/images/storage_images/storage_ruinedchildhood.svg";
     } else if (beername === "Sleighride") {
-      return "./assets/images/storage_images/storage_sleighreid.svg";
+      return "./assets/images/storage_images/storage_sleighride.svg";
     }
     return "NO PICTURE";
   }
@@ -63,7 +63,8 @@ function Storage(props) {
           {arrFive.map((storage, index) => (
             <div id={"storage_0" + index} className="storage">
               {/* <img className="storageimage" src={storageIcons[0].src} alt="storageimage"/> */}
-              <img className="storageimage" src="./assets/images/storage_images/storage_fairytaleale.svg" alt="storageimage" />
+              {/* {<img className="storageimage" src="./assets/images/storage_images/storage_githop.svg" alt="storageimage" />} */}
+              <img className="storageimage" src={arrFive[index].src} alt="No image" />
 
               <h3>Name: {props.storage[index].name}</h3>
               <p>Amount:{props.storage[index].amount}</p>

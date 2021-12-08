@@ -1,13 +1,20 @@
 import React, { Component } from "react";
-/* import './App.css';
-import '../node_modules/react-vis/dist/style.css'; */
+/* import './App.css'; */
+/* import '../node_modules/react-vis/dist/style.css';*/
 import { XYPlot, VerticalBarSeries } from "react-vis";
+/* import Barchartdata from "./barchartdata"; */
 
 class Barchart extends Component {
+  /*   constructor() { */
+  /*    let data = [];
+    this.state = data; */
+
   render() {
-    /* if (!this.queue) {
+    if (!this.props) {
       return null;
-    } */
+    }
+    /*     let data = this.setState(this.state.push({ x: this.props.time, y: this.props.queue.length }));
+     */
 
     let data = [];
     /*  const [data, setData] = useState([]); */
@@ -17,8 +24,9 @@ class Barchart extends Component {
         y: this.props.queue.length,
       })
     );
+    /* let data = [];
+    data.push(<Barchartdata data={this.props.queue} />); */
 
-    console.log(data);
     return (
       <div className="queue_barchart">
         <XYPlot height={300} width={300}>

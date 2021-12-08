@@ -14,16 +14,13 @@ function Queue(props) {
     let date = new Date(calculatedTime);
     let minutes = "0" + date.getMinutes();
     let seconds = "0" + date.getSeconds();
-    let formattedTime = minutes.substr(-2) + ":" + seconds.substr(-2);
-    let formattedSeconds = seconds.substr(-2);
+    let formattedMinutes = minutes.substr(-2) + ":" + seconds.substr(-2);
+    let formattedSeconds = date.getSeconds();
 
-    onlySeconds();
-    function onlySeconds() {
-      if (minutes === "0" + 0) {
-        return <p>{formattedSeconds + " seconds ago"}</p>;
-      } else if (minutes > "0" + 0) {
-        return <p>{formattedTime + " minutes ago"}</p>;
-      }
+    if (minutes === "0" + 0) {
+      return <p>{formattedSeconds + " seconds ago"}</p>;
+    } else if (minutes > "0" + 0) {
+      return <p>{formattedMinutes + " minutes ago"}</p>;
     }
   }
 
@@ -81,19 +78,23 @@ function Queue(props) {
     },
   ]); */
 
-  console.log(props.queue);
-
   return (
     <section id="queue">
       <h1>Queue</h1>
       <div className="data-first-view">
         <div id="data-queue-barchart">
-          <div className="chartdiv" id="chartdiv"></div>
+          {/*   <div className="chartdiv" id="chartdiv"></div> */}
           {props.queue.map((queue, index) => (
             <div id={"order_0" + index} className="order">
               <h3>{queue.id}</h3>
               {orderTime(queue.startTime)}
-              {/* { <p>Ordered {formattedTime} ago</p> } */}
+              <p>
+                {queue.order.map((order, index) => (
+                  <ul className="orderList">
+                    <li>{order}</li>
+                  </ul>
+                ))}
+              </p>
             </div>
           ))}
           <Barchart queue={props.queue} time={props.time} />

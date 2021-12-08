@@ -1,4 +1,5 @@
 import React from "react";
+
 /* import "./styles/header.scss"; */
 
 function Header(props) {
@@ -25,7 +26,7 @@ function Header(props) {
       </div>
       <div id="slogan">- Everybody was kung foo drinking</div>
       <div id="data-time">
-        <p>TIME: {formattedTime}</p>
+        <p> {formattedTime} </p>
       </div>
       <div id="data-current-revenue">REVENUE:{props.revenue} </div>
       <button id="report">REPORT</button>

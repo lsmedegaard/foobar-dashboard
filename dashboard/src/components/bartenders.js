@@ -22,14 +22,14 @@ function Bartenders(props) {
 
   function usingTap(tap) {
     if (tap === null) {
-      return <p>none</p>;
+      return "none";
     }
     return tap;
   }
 
   function servingCustomer(customer) {
     if (customer === null) {
-      return <p>none</p>;
+      return "none";
     }
     return customer;
   }
