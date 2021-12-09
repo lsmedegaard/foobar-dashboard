@@ -1,38 +1,65 @@
-import React, { Component } from "react";
-/* import './App.css';
-import '../node_modules/react-vis/dist/style.css'; */
+import React, { Component, useState, useEffect } from "react";
 import { XYPlot, VerticalBarSeries } from "react-vis";
-import { useState } from "react";
-import { useEffect } from "react";
+
+function Barchart(props) {
+  const [plots, setPlots] = useState([]);
+
+  let showTenBars = [];
+
+  useEffect(() => {
+    setPlots((prevPlots) =>
+      prevPlots.concat({
+        x: props.time,
+        y: props.queue.length,
+      })
+    );
+  }, [props.time]);
+
+  /*  const [plotsTen, setPlotsTen] = useState([]);
+  useEffect(() => {
+    setPlotsTen((prevPlotsTen) =>
+      for(let i = 0; i<10; i++){
+        prevPlotsTen.concat({plots[i]})
+      }
+    );
+  }, [plots]); */
+
+  /*  for (let i = 0; i < 10; i++) {
+    showTenBars.concat(plots[i]);
+  }
+
+  
+ */
+
+  let arrTen = plots.slice(-11, -1);
+  console.log();
+  return (
+    <div className="queue_barchart" width={300} height={100}>
+      {arrTen.map((queue) => (
+        <div className="bar" style={{ height: queue.y * 10 + "%" }}>
+          <p>{queue.y}</p>
+        </div>
+      ))}
+      {/* 
+      <XYPlot height={300} width={500} fill="green" barWidth="0.1">
+        <VerticalBarSeries style={({ barWidth: 1 }, { strokeWidth: 10 })} data={arrTen} />
+      </XYPlot> */}
+    </div>
+  );
+}
+/* 
 class Barchart extends Component {
   render() {
-    if (!this.props.queue) {
+    if (!this.props) {
       return null;
     }
+    let data = [];
 
-    let queueData = this.props.queue;
-    let data = [
-      /*  { x: "1", y: 10 },
-      { x: "3", y: 20 },
-      { x: "5", y: 30 },
-      { x: "7", y: 5 },
-      { x: "9", y: 5 },
-      { x: "11", y: 5 },
-      { x: "13", y: 5 },
-      { x: "15", y: 5 }, */
-    ];
+    data.push({
+      x: this.props.time,
+      y: this.props.queue.length,
+    });
 
-    /*  useEffect(() => {
-      const interval = setInterval(() => {
-        console.log("This will also run every second!"); */
-    data.push({ x: this.props.time / 10000000000000, y: queueData.length + 1 / 100 });
-    /*   }, 1000);
-      return () => clearInterval(interval);
-    }, []); */
-    /*  const [data, setData] = useState([]); */
-    /*  data.push({}); */
-
-    console.log(data);
     return (
       <div className="queue_barchart">
         <XYPlot height={300} width={500}>
@@ -42,5 +69,5 @@ class Barchart extends Component {
     );
   }
 }
-
+*/
 export default Barchart;

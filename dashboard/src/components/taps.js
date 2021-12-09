@@ -52,7 +52,7 @@ function sortBeers(){
       return "./assets/images/taps_images/tap_elhefe.svg";
     } else if (beername === "Fairy Tale Ale") {
       return "./assets/images/taps_images/tap_fairytaleale.svg";
-    } else if (beername === "Hollaback") {
+    } else if (beername === "Hollaback Lager") {
       return "./assets/images/taps_images/tap_hollaback.svg";
     } else if (beername === "Hoppily Ever After") {
       return "./assets/images/taps_images/tap_hoppilyeverafter.svg";
@@ -63,7 +63,7 @@ function sortBeers(){
     } else if (beername === "Ruined Childhood") {
       return "./assets/images/taps_images/tap_ruinedchildhood.svg";
     } else if (beername === "Sleighride") {
-      return "./assets/images/taps_images/tap_sleighreid.svg";
+      return "./assets/images/taps_images/tap_sleighride.svg";
     }
     return "NO PICTURE";
   }
@@ -77,7 +77,7 @@ function sortBeers(){
             <div id={"tap_0" + index} className="tap">
               <img className="tapsimage" src={arrFive[index].src} />
 
-              <h3>{props.taps[index].beer}</h3>
+              <h2>{props.taps[index].beer}</h2>
               <p>{percentage(props.taps[index].level, props.taps[index].capacity)}% left</p>
               <p>{inUse(index)}</p>
               {/* {levelArr.push(props.taps[index].level)}
