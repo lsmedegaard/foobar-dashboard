@@ -29,7 +29,7 @@ function Barchart(props) {
   }
 
   
- */
+ */ const labels = ["10sek", "9sek", "8sek", "7sek", "6sek", "5sek", "4sek", "3sek", "2sek", "current"];
 
   let arrTen = plots.slice(-11, -1);
   console.log();
@@ -39,6 +39,9 @@ function Barchart(props) {
         <div className="bar" style={{ height: queue.y * 10 + "%" }}>
           <p>{queue.y}</p>
         </div>
+      ))}
+      {labels.map((label) => (
+        <p>{label}</p>
       ))}
       {/* 
       <XYPlot height={300} width={500} fill="green" barWidth="0.1">
