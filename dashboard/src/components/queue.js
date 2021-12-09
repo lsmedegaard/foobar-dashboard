@@ -1,7 +1,7 @@
 /* import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy"; */
 import React from "react";
-import Barchart from "./barchart";
+/* import Barchart from "./barchart"; */
 
 function Queue(props) {
   if (!props.queue) {
@@ -71,22 +71,18 @@ function Queue(props) {
     },
   ]); */
 
-  console.log(props.queue);
-
   return (
     <section id="queue">
       <h1>Queue</h1>
       <div className="data-first-view">
         <div id="data-queue-barchart">
-          <div className="chartdiv" id="chartdiv"></div>
           {props.queue.map((queue, index) => (
-            <div id={"order_0" + index} className="order">
+            <div id={"order_0" + index} className="queue" width="10px" height={queue.length} color="blue">
               <h3>{queue.id}</h3>
-              {/* { <p>Ordered {formattedTime} ago</p> } */}
             </div>
           ))}
-          <Barchart queue={props.queue} time={props.time} />
         </div>
+        {/*  <Barchart queue={props.queue} time={props.time} /> */}
       </div>
 
       <div className="data-full-view">

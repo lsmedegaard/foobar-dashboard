@@ -27,7 +27,7 @@ function App() {
       fetch("https://coding-mokeys-foobar.herokuapp.com/")
         .then((response) => response.json())
         .then((data) => setData(data));
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
